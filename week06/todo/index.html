@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>W06 ToDo-List</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="clear">
+            <i class="icon class-refresh">Clear all<img src="img/Refresh.png"></i>
+            </div>
+            
+            <div id="title">
+                <h1>ToDo-List-App</h1>
+            </div>
+        </div>
+
+        <div class="content">
+            <ul id="list">
+               <!-- -->
+                
+            </ul>
+        
+            <div class="addArea">
+                <i class="icons addBtn">+</i>
+                <input type="text" id="input" placeholder="Input a task">
+            </div>
+
+            <div class="group">
+                <p>Group by</p>
+                <button class="groupChecked" onclick="gruopChecked()">Checked</button>
+               
+                <button class="groupUnchecked" onclick="gruopChecked()">Checked</button>
+
+                <div>
+                    <li id="g1">
+                    </li>
+                    
+                    <p ></p>
+                    <p id="g2"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
