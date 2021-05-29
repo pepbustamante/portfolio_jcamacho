@@ -1,0 +1,87 @@
+<!doctype html>
+  <html>
+    <head>
+      <title>W02 Team Activity</title>
+      
+
+      <style>
+    
+      </style>
+    </head>
+
+    <body>
+    <!-- Requirement 1 -->
+    <h1>01</h1>
+    <input id="input01" type="text" />
+    <button id="inputText1" onclick="requirement01()">Submit</button>
+    <div id="displayText"></div>
+    <br><br>
+    
+     <!-- Requirement 2 -->
+    <h1>02</h1>
+    <input id="number1" type="text" />
+    <button id="sumButton" onclick="requirement02()">Result</button>
+    <div id="displaySum"></div>
+    
+    <!-- Requirement 3 -->
+    <h1>03</h1>
+    <input id="r3number1" type="number" /> +
+    <input id="r3number2" type="number" />
+    <button id="addsum" onclick="requirement03()">=</button>
+    <div id="displayResult"></div>
+
+
+    <!-- Strechy -->
+    <h1>stretch</h1>
+    <input id="schnumber1" type="number" /> 
+    <input id="schnumber2" type="number" />
+    
+    <button id="schbutton1" onclick="stretch()">+</button>
+    <button id="schbutton2" onclick="stretch()">-</button>
+    <button id="schbutton3" onclick="stretch()">*</button>
+    <div id="stretchResult"></div>
+    <script>
+      //*Requirement 01
+      function requirement01() {
+        let input01 = document.getElementById('input01').value;
+        let outputElement = document.getElementById('displayText');
+        outputElement.innerHTML = 'Your input was: ' + input01;  
+      }
+      
+      //*Requirement 02*
+      function requirement02() {
+        let input01 = document.getElementById('number1').value;
+        let outputElement = document.getElementById('displaySum');
+        var input01Int = parseInt(input01);
+
+        if(input01Int !== NaN){
+          outputElement.innerHTML = 'The result is: ' + sum(input01Int);
+        }  
+      }
+
+      function sum(number) {
+        var result = 0;
+        for (i=0; i <= number; i++) {
+          result += i; 
+        }
+        return result;
+      }
+
+       //*Requirement 03
+      function requirement03() {
+        let input1 = document.getElementById('r3number1').value;
+        let input2 = document.getElementById('r3number2').value;
+        const outputElement = document.getElementById('displayResult');
+
+        const input01Int = parseInt(input1);
+        const input02Int = parseInt(input2);
+
+        if((input01Int !== NaN) & (input02Int !== NaN)){
+          let theResult =  input01Int + input02Int;
+
+          outputElement.innerHTML = 'The result is: ' + theResult;
+        }  
+      }
+    </script>
+    </body>
+</html>
