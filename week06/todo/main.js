@@ -119,20 +119,18 @@ list.addEventListener("click", function(event){
     localStorage.setItem("TODO", JSON.stringify(LIST));
 });
 
-//function gruopChecked() {
-  //  document.getElementsByClassName('CHECK');
-  //}
 
-  function gruopChecked(){
-    var arrayInput = new Array();
-    var inputValues = document.getElementsByClassName('completedMark'),
-    namesValues = [].map.call(inputValues,function(dataInput){
-    arrayInput.push(dataInput.value);
-    });
-    arrayInput.forEach(function(inputsValuesData){
-    console.log(inputsValuesData);
-    });
-    }
+  function gruopChecked() {
+    list.innerText = "";
+    filteredTasks = data.filter((item) => item.checkedMark === false);
+    filteredTasks.forEach(addToDo);
+}
+
+function gruopUnChecked() {
+    list.innerText = "";
+    filteredTasks = data.filter((item) => item.checkedMark === true);
+    filteredTasks.forEach(addToDo);
+}
 
 
 
