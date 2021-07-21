@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Project - Catched Pokemon List</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav>
+        <span id="allPokemon" class="active">All Pokemon List</span>
+        <span id="catchedPkmn">Catched</span>
+    </nav>
+    <div id="title">
+        <h1>Pokemon Go Catched list</h1>
+        <p>Make your list of your catched Pokemons clicking in the button, discover the image of the Pokemons clicking in the zone of the pokemon</p>
+        <p>Catch them all!</p>
+    </div>  
+    <div class="content">
+        <input type="text" id="myInput" onkeyup="searchPokemon()" placeholder="Search for name..."
+            title="Type a Pokemon Name">
+        <div class="listBox">
+            <ul id="allList"></ul>
+            <ul id="catchedList" class="hide"></ul>
+        </div>
+    </div>
+
+    <script src="scripts/pokemon.js"></script>
+</body>
+
+</html>
